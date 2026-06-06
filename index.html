@@ -46,7 +46,7 @@
             font-family: 'Rubik', sans-serif;
             font-size: 2.3rem;
             font-weight: 700;
-            margin-bottom: 6px; /* צמצום הרווח בין השורה הראשונה לשנייה */
+            margin-bottom: 4px; /* צמצום משמעותי בין שורה ראשונה לשנייה */
             color: #000000;
         }
 
@@ -54,8 +54,9 @@
             font-family: 'Rubik', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 12px; /* צמצום הרווח כדי להעלות את הטקסט שמתחת */
+            margin-bottom: 8px; /* צמצום הרווח מתחת לכותרת הכתומה */
             color: var(--brand-orange);
+            line-height: 1.3;
         }
 
         .hero-p {
@@ -67,11 +68,12 @@
 
         .main-img {
             width: 100%;
-            max-width: 340px; /* הקטנה קלה של התמונה לבקשתך */
-            border-radius: 8px;
+            max-width: 290px; /* הקטנה נוספת של התמונה */
+            border-radius: 16px;
             margin: 20px auto 30px auto;
             display: block;
             border: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
 
         .profile-img-container {
@@ -214,6 +216,25 @@
             height: 1px;
             background: #e2e8f0;
             margin: 40px 0;
+        }
+
+        /* התאמות מיוחדות למסכים קטנים (טלפונים) */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+                margin-bottom: 2px; /* הידוק נוסף של המרווח בכותרת בנייד */
+            }
+            header h2 {
+                font-size: 1.2rem;
+                margin-bottom: 6px; /* הידוק הרווח מתחת לכותרת בנייד */
+            }
+            .hero-p {
+                font-size: 1.05rem;
+                padding: 0 10px;
+            }
+            .main-img {
+                max-width: 75%; /* הקטנה של התמונה בטלפון למראה מעודן */
+            }
         }
     </style>
 </head>
