@@ -3,255 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אשף הקובייה - קורס קובייה הונגרית עם אורי צירקין</title>
+    <title>לפתור קובייה הונגרית בקלות - אורי צירקין</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #00c853;
-            --primary-dark: #009624;
-            --secondary: #121212;
-            --text-dark: #333333;
-            --text-light: #ffffff;
-            --bg-light: #f5f5f5;
+            --primary-color: #25D366;
+            --primary-hover: #20ba5a;
+            --text-dark: #1e293b;
+            --text-muted: #475569;
+            --bg-light: #ffffff;
+            --border-color: #c2f4d3;
+            --brand-orange: #ff6f00;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
+            font-family: 'Assistant', sans-serif;
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.6;
-        }
-
-        /* סרגל ניווט */
-        nav {
-            background-color: var(--secondary);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-light);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .logo-img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-
-        /* אזור ראשי (Hero) */
-        .hero {
-            background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
-            color: var(--text-light);
-            padding: 140px 20px 70px;
+            padding-bottom: 80px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
-        .hero h1 {
-            font-size: 2.8rem;
+        .container {
+            width: 90%;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 40px 0 20px 0;
+        }
+
+        header h1 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #000000;
+        }
+
+        header h2 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
             margin-bottom: 20px;
-            color: var(--text-light);
+            color: var(--brand-orange); /* צבוע בכתום לבקשתך */
         }
 
-        .hero h1 span {
-            color: var(--primary);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #ccc;
-        }
-
-        /* כפתורים */
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--text-light);
-            padding: 15px 35px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,200,83,0.4);
-        }
-
-        .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,200,83,0.6);
-        }
-
-        /* אזור יתרונות הקורס */
-        .features {
-            padding: 60px 20px;
-            max-width: 1000px;
+        .hero-p {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            max-width: 550px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
         }
 
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary);
+        .main-img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 4px;
+            margin: 30px auto;
+            display: block;
+            border: 2px solid #25D366;
         }
 
-        .feature-card h3 {
-            margin: 15px 0 10px;
-            font-size: 1.4rem;
-        }
-
-        /* מי אני */
-        .about-section {
-            background-color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .about-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .profile-img-container {
+            width: 280px;
+            height: 280px;
+            margin: 30px auto;
+            border-radius: 50%;
+            border: 4px solid #ff5722;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #f1f5f9;
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border: 4px solid var(--primary);
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            object-position: center top; 
         }
 
-        .about-section h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
+        .section-title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 35px 0 15px 0;
+            color: #000000;
         }
 
-        .about-section p {
-            font-size: 1.1rem;
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto;
+        .section-p {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            margin-bottom: 12px;
         }
 
-        /* אזור הנעה לפעולה תחתון */
-        .cta-bottom {
-            background-color: #1e1e1e;
+        .simple-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
             color: white;
-            padding: 60px 20px;
-            text-align: center;
+            text-decoration: none;
+            padding: 10px 24px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            margin: 20px auto;
+            transition: background-color 0.2s;
         }
 
-        .cta-bottom h2 {
-            font-size: 2rem;
+        .simple-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .pricing-card {
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px 20px;
+            margin: 30px auto;
+            max-width: 320px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .pricing-card h4 {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .price {
+            font-family: 'Rubik', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #1e293b;
             margin-bottom: 15px;
         }
 
-        .price-tag {
-            font-size: 2.5rem;
-            color: var(--primary);
+        .v-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .v-icon {
+            color: var(--primary-color);
             font-weight: bold;
-            margin: 20px 0;
         }
 
-        /* תחתית העמוד */
-        footer {
-            background-color: var(--secondary);
-            color: #888;
+        .action-btn {
+            display: block;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: background-color 0.2s;
+        }
+
+        .action-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .footer-note {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 15px;
+        }
+
+        .bullets-list {
             text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            border-top: 1px solid #222;
+            max-width: 550px;
+            margin: 25px auto;
+            list-style: none;
+            padding: 0;
         }
 
-        /* התאמה לניידים */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1.1rem; }
-            .btn { width: 100%; text-align: center; }
+        .bullets-list li {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .bullets-list span {
+            display: block;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 40px 0;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">
-            <img src="cube 1.png" alt="לוגו קובייה" class="logo-img">
-            <span>אשף הקובייה</span>
-        </div>
-    </nav>
+    <div class="container">
+        
+        <header>
+            <h1>לפתור קובייה הונגרית בקלות</h1>
+            <h2>קורס דיגיטלי לילדים ובני נוער ב-7 ימים בלבד!</h2>
+            <br>
+            <p class="hero-p">
+                לימוד בשיטה ייחודית, מהירה ופשוטה - שמתאימה למי שמעולם לא החזיק קובייה, ומביאה אתכם ל-100% הצלחה.
+                <br><br>
+                שיעורים קצרים, לימוד ויזואלי,<br>חווייתי ובגובה העיניים.
+            </p>
+        </header>
 
-    <header class="hero">
-        <h1>לפתור קובייה הונגרית? <span>זה פשוט!</span></h1>
-        <p>הצטרפו לקורס הדיגיטלי של אורי צירקין ותלמדו את השיטה הקלה והמהירה ביותר לפצח את הקובייה הונגרית, צעד אחר צעד.</p>
-        <a href="#purchase" class="btn">להרשמה המהירה לקורס</a>
-    </header>
+        <img src="https://images.unsplash.com/photo-1512207736890-6ffed8aef4e5?w=400" alt="אורי צירקין" class="profile-img">
 
-    <section class="features">
-        <div class="feature-card">
-            <div style="font-size: 2.5rem;">🎓</div>
-            <h3>שיטה קלה להבנה</h3>
-            <p>בלי נוסחאות מסובכות. לומדים דרך סיפורים ותנועות פשוטות שכל אחד יכול לזכור.</p>
-        </div>
-        <div class="feature-card">
-            <div style="font-size: 2.5rem;">⏱️</div>
-            <h3>למידה בקצב שלכם</h3>
-            <p>שיעורים קצרים, לימוד ויזואלי, חווייתי ובגובה העיניים.</p>
-        </div>
-        <div class="feature-card">
-            <div style="font-size: 2.5rem;">🚀</div>
-            <h3>תוצאות מהירות</h3>
-            <p>כבר מהשיעורים הראשונים תבינו את ההיגיון ותתחילו להרכיב את השכבות בעצמכם.</p>
-        </div>
-    </section>
+        <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="simple-btn" target="_blank">לרכישה מהירה ב-111 ₪</a>
 
-    <section class="about-section">
-        <div class="about-container">
-            <img src="ori-photo.jpg" alt="אורי צירקין" class="profile-img">
-            <h2>נעים להכיר, אורי צירקין</h2>
-            <p>מנטור לקובייה הונגרית ומנחה הקורס. אחרי שפיצחתי את השיטות הטובות ביותר, זיקקתי אותן לתוך קורס אחד פשוט ומהיר שיביא אתכם מאפס ליכולת לפתור קובייה שלמה לגמרי לבד!</p>
+        <h3 class="section-title">למה דווקא קובייה הונגרית?</h3>
+        <p class="section-p">זהו כלי מיוחד במינו הנותן חוויית הצלחה מיידית, ביטחון עצמי בכמויות, ריכוז ורוגע.</p>
+        <p class="section-p">נפתח עולם גדול ובלתי נגמר של התפתחות אישית וקוגניטיבית מחוץ למסך.</p>
+        <p class="section-p">וכמובן נותנת את היכולת להרשים את כולם בגאונות הבלתי מתפשרת שלך (:</p>
+        <p class="section-p" style="color: var(--text-dark); margin-top: 15px;">בכל זמן ובכל מקום</p>
+
+        <div class="pricing-card">
+            <h4>הקורס הדיגיטלי המלא</h4>
+            <div class="price">₪111</div>
+            <div class="v-label">
+                <span class="v-icon">✓</span>
+                <span>התשלום מתבצע בקלות ב-Blt או PayBox</span>
+            </div>
+            <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="action-btn" target="_blank">לרכישה מהירה ב-111 ש"ח</a>
+            <p class="footer-note">* המדריך יישלח אליכם ישירות לוואטסאפ או למייל מיד לאחר התשלום.</p>
         </div>
-    </section>
 
-    <section id="purchase" class="cta-bottom">
-        <h2>התחילו לפתור כבר היום!</h2>
-        <p>גישה מלאה לכל תכני הקורס והסרטונים ללא הגבלת זמן.</p>
-        <div class="price-tag">ב-111 ₪ בלבד</div>
-        <a href="#" class="btn">לרכישה מהירה ב-111 ₪</a>
-    </section>
+        <hr>
 
-    <footer>
-        <p>&copy; 2026 אשף הקובייה - אורי צירקין. כל הזכויות שמורות.</p>
-    </footer>
+        <h3 class="section-title">מי אני?</h3>
+        
+        <div class="profile-img-container">
+            <img src="https://i.postimg.cc/1Rj23DwL/ori-photo.jpg" alt="אורי צירקין" class="profile-img">
+        </div>
+        
+        <p class="section-p"><strong>אני אורי צירקין, בן 13 מכרכור.<br>מתחרה בתחרויות קובייה הונגרית ומחזיק בשיא רשמי של 8 שניות.</strong></p>
+        <br>
+        <p class="section-p">קיבלתי את הקובייה הראשונה שלי בגיל 8, ומאז היא חברה שמלווה אותי לכל מקום.</p>
+        <p class="section-p">בתחילת הדרך, לקח לי המון זמן למצוא אנשים, סרטוני יוטיוב ומדריכים ברשת בכדי ללמוד לפתור את הקובייה. מיום שהצלחתי, התחלתי לחוות הצלחות רבות, ותחושת ביטחון וגאווה מילאה אותי.</p>
+        <p class="section-p">מתוך כל זה החלטתי ללמד ילדים את המתנה הנפלאה הזו, אבל בצורה הרבה יותר קלה מהלימוד שלי והחלטתי לבנות את הקורס המיוחד הזה.</p>
+        <p class="section-p">השיטה שבניתי במשך שנים היא זיקוק של כל מה שילד או נער בתחילת דרכו עם הקובייה צריך:<br>מישהו בגילם שמדבר אליהם בגובה העיניים,<br>מתוך ניסיון רב, נותן להם השראה ומראה להם שזה אפשרי.</p>
+
+        <div class="pricing-card">
+            <h4>הקורס הדיגיטלי המלא</h4>
+            <div class="price">₪111</div>
+            <div class="v-label">
+                <span class="v-icon">✓</span>
+                <span>התשלום מתבצע בקלות ב-Blt או PayBox</span>
+            </div>
+            <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="action-btn" target="_blank">לרכישה מהירה ב-111 ש"ח</a>
+            <p class="footer-note">* המדריך יישלח אליכם ישירות לוואטסאפ או למייל מיד לאחר התשלום.</p>
+        </div>
+
+        <hr>
+
+        <h3 class="section-title">מה תקבלו בקורס?</h3>
+        <ul class="bullets-list">
+            <li>
+                <strong>7 סרטונים (אחד לכל יום)</strong>
+                <span>שאפשר להריץ אחורה וקדימה ולחזור אליהם תמיד.</span>
+            </li>
+            <li>
+                <strong>דפי אימונים מודפסים לכל סרטון</strong>
+                <span>שאפשר לקחת לכל מקום ולהתאמן.</span>
+            </li>
+            <li>
+                <strong>הסבר ייחודי בשיטת הסיפור</strong>
+                <span>פשוט, קל להבנה, קל לזכירה ובגובה העיניים.</span>
+            </li>
+            <li><strong>מאפס ידע לפתרון מלא.</strong></li>
+            <li><strong>פתיחה לעולם ומלואו של שכלולים ופתירות.</strong></li>
+            <li><strong>אופציות לתחרויות וקהילה תומכת.</strong></li>
+            <li><strong>מתנה לכל החיים.</strong></li>
+        </ul>
+
+        <hr>
+
+        <h3 class="section-title" style="color: var(--brand-orange);">אין זמן טוב יותר מהרגע הזה</h3>
+        <p class="section-p" style="font-size: 1.25rem; font-weight: 600; color: var(--brand-orange);">קליק אחד והנכס הזה אצלך לכל החיים</p>
+        
+        <div class="pricing-card" style="margin-top: 20px;">
+            <h4>הצטרפו עכשיו לקורס המלא</h4>
+            <div class="price">₪111</div>
+            <div class="v-label">
+                <span class="v-icon">✓</span>
+                <span>גישה מיידית ותמיכה לכל החיים</span>
+            </div>
+            <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="action-btn" target="_blank">קליק אחד והקורס אצלך ➔</a>
+        </div>
+
+    </div>
 
 </body>
 </html>
