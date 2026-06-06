@@ -39,7 +39,7 @@
         }
 
         header {
-            padding: 40px 0 20px 0;
+            padding: 40px 0 15px 0;
         }
 
         header h1 {
@@ -51,7 +51,7 @@
         }
 
         header h1 br {
-            display: none; /* במחשב אין שבירת שורה */
+            display: none;
         }
 
         header h2 {
@@ -64,7 +64,7 @@
         }
 
         header h2 br {
-            display: none; /* במחשב אין שבירת שורה */
+            display: none;
         }
 
         .hero-p {
@@ -228,28 +228,36 @@
 
         /* התאמות מיוחדות למסכים קטנים (טלפונים) */
         @media (max-width: 480px) {
+            header {
+                padding: 25px 0 10px 0; /* צמצום הרווח העליון הכללי בנייד */
+            }
             header h1 {
-                font-size: 2.2rem; /* החזרת הגודל הגדול והטוב */
-                margin-bottom: 4px;
-                line-height: 1.2;
+                font-size: 1.8rem; /* הקטנה קלה של הטקסט השחור הראשון */
+                margin-bottom: 6px; /* רווח קטן ומדויק בינו לבין הכתום */
+                line-height: 1.25;
             }
             header h1 br {
-                display: block; /* הפעלת שבירת השורה המדויקת בטלפון */
+                display: block;
             }
             header h2 {
-                font-size: 1.4rem; /* החזרת הגודל הגדול והטוב */
-                margin-bottom: 8px;
+                font-size: 1.3rem;
+                margin-bottom: 10px; /* צמצום הרווח מתחת לכתום */
                 line-height: 1.3;
             }
             header h2 br {
-                display: block; /* הפעלת שבירת השורה המדויקת בטלפון */
+                display: block;
             }
             .hero-p {
-                font-size: 1.1rem;
-                padding: 0 10px;
+                font-size: 1.05rem;
+                padding: 0 5px;
+                line-height: 1.4;
             }
             .main-img {
-                max-width: 75%;
+                max-width: 55%; /* הקטנה משמעותית של התמונה כדי לפנות מקום */
+                margin: 15px auto 15px auto; /* צמצום השוליים מסביב לתמונה */
+            }
+            .simple-btn {
+                margin: 10px auto; /* הבאת כפתור הרכישה קרוב יותר לתמונה */
             }
         }
     </style>
