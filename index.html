@@ -68,7 +68,7 @@
         }
 
         .hero-p {
-            font-size: 1.15rem;
+            font-size: 1.25rem; /* הגדלה קלה של הכתב */
             color: var(--text-dark);
             max-width: 550px;
             margin: 0 auto;
@@ -78,7 +78,7 @@
             width: 100%;
             max-width: 290px;
             border-radius: 16px;
-            margin: 20px auto 30px auto;
+            margin: 20px auto 20px auto;
             display: block;
             border: none;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -229,11 +229,11 @@
         /* התאמות מיוחדות למסכים קטנים (טלפונים) */
         @media (max-width: 480px) {
             header {
-                padding: 25px 0 10px 0; /* צמצום הרווח העליון הכללי בנייד */
+                padding: 25px 0 10px 0;
             }
             header h1 {
-                font-size: 1.8rem; /* הקטנה קלה של הטקסט השחור הראשון */
-                margin-bottom: 6px; /* רווח קטן ומדויק בינו לבין הכתום */
+                font-size: 1.8rem;
+                margin-bottom: 6px;
                 line-height: 1.25;
             }
             header h1 br {
@@ -241,23 +241,23 @@
             }
             header h2 {
                 font-size: 1.3rem;
-                margin-bottom: 10px; /* צמצום הרווח מתחת לכתום */
+                margin-bottom: 10px;
                 line-height: 1.3;
             }
             header h2 br {
                 display: block;
             }
             .hero-p {
-                font-size: 1.05rem;
+                font-size: 1.15rem; /* הגדלה קלה גם בנייד */
                 padding: 0 5px;
                 line-height: 1.4;
             }
             .main-img {
-                max-width: 55%; /* הקטנה משמעותית של התמונה כדי לפנות מקום */
-                margin: 15px auto 15px auto; /* צמצום השוליים מסביב לתמונה */
+                max-width: 55%;
+                margin: 15px auto 15px auto;
             }
             .simple-btn {
-                margin: 10px auto; /* הבאת כפתור הרכישה קרוב יותר לתמונה */
+                margin: 15px auto;
             }
         }
     </style>
@@ -269,7 +269,9 @@
         <header>
             <h1>לפתור קובייה<br>הונגרית בקלות</h1>
             <h2>קורס דיגיטלי לילדים ובני נוער<br>ב-7 ימים בלבד!</h2>
-            <br>
+            
+            <img src="cube2.jpg" alt="קובייה הונגרית" class="main-img">
+
             <p class="hero-p">
                 לימוד בשיטה ייחודית, מהירה ופשוטה - שמתאימה למי שמעולם לא החזיק קובייה, ומביאה אתכם ל-100% הצלחה.
                 <br><br>
@@ -277,15 +279,12 @@
             </p>
         </header>
 
-        <img src="cube2.jpg" alt="קובייה הונגרית" class="main-img">
-
         <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="simple-btn" target="_blank">לרכישה מהירה ב-111 ₪</a>
 
         <h3 class="section-title">למה דווקא קובייה הונגרית?</h3>
-        <p class="section-p">זהו כלי מיוחד במינו הנותן חוויית הצלחה מיידית, ביטחון עצמי בכמויות, ריכוז ורוגע.</p>
+        <p class="section-p">זהו כלי מיוחד במינו הנותן חוויית הצלחה מיידית, ביטחון עצמי גבוה, ריכוז ורוגע.</p>
         <p class="section-p">נפתח עולם גדול ובלתי נגמר של התפתחות אישית וקוגניטיבית מחוץ למסך.</p>
         <p class="section-p">וכמובן נותנת את היכולת להרשים את כולם בגאונות הבלתי מתפשרת שלך (:</p>
-        <p class="section-p" style="color: var(--text-dark); margin-top: 15px;">בכל זמן ובכל מקום</p>
 
         <div class="pricing-card">
             <h4>הקורס הדיגיטלי המלא</h4>
@@ -308,7 +307,7 @@
         
         <p class="section-p"><strong>אני אורי צירקין, בן 13 מכרכור.<br>מתחרה בתחרויות קובייה הונגרית ומחזיק בשיא רשמי של 8 שניות.</strong></p>
         <br>
-        <p class="section-p">קיבלתי את הקובייה הראשונה שלי בגיל 8, ומאז היא חברה שמלווה אותי לכל מקום.</p>
+        <p class="section-p">קיבלתי את הקובייה הראשונה שלי בגיל 7, ומאז היא חברה שמלווה אותי לכל מקום.</p>
         <p class="section-p">בתחילת הדרך, לקח לי המון זמן למצוא אנשים, סרטוני יוטיוב ומדריכים ברשת בכדי ללמוד לפתור את הקובייה. מיום שהצלחתי, התחלתי לחוות הצלחות רבות, ותחושת ביטחון וגאווה מילאה אותי.</p>
         <p class="section-p">מתוך כל זה החלטתי ללמד ילדים את המתנה הנפלאה הזו, אבל בצורה הרבה יותר קלה מהלימוד שלי והחלטתי לבנות את הקורס המיוחד הזה.</p>
         <p class="section-p">השיטה שבניתי במשך שנים היא זיקוק של כל מה שילד או נער בתחילת דרכו עם הקובייה צריך:<br>מישהו בגילם שמדבר אליהם בגובה העיניים,<br>מתוך ניסיון רב, נותן להם השראה ומראה להם שזה אפשרי.</p>
