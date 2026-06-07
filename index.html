@@ -42,13 +42,13 @@
             padding: 40px 0 15px 0;
         }
 
-        /* מיכל כותרת חכם - במחשב מחבר לשורה ישרה, בנייד מפרק לשתיים */
+        /* מיכל כותרת שחורה - במחשב שורה אחת, בנייד שתיים */
         .main-title-container {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 12px; /* רווח קבוע ומושלם בין המילים במחשב */
+            gap: 12px;
             margin-bottom: 4px;
         }
 
@@ -61,15 +61,22 @@
             margin: 0;
         }
 
-        /* הכותרת הכתומה */
+        /* הכותרת הכתומה - שליטה על חלוקת שורות */
         header h3 {
             font-family: 'Rubik', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
             margin: 10px auto;
             color: var(--brand-orange);
-            line-height: 1.3;
-            display: block;
+            line-height: 1.4;
+        }
+
+        .orange-line {
+            display: inline;
+        }
+
+        .orange-line::after {
+            content: " "; /* רווח טבעי בין החלקים במחשב */
         }
 
         .hero-p {
@@ -236,21 +243,24 @@
             header {
                 padding: 25px 0 10px 0;
             }
-            /* הפיכת המיכל לאנכי - מייצר שבירת שורה מושלמת וממורכזת בנייד */
             .main-title-container {
                 flex-direction: column;
                 gap: 2px;
                 margin-bottom: 6px;
             }
-            header h1 {
-                font-size: 1.8rem;
-            }
-            header h2.sub-title {
+            header h1, header h2.sub-title {
                 font-size: 1.8rem;
             }
             header h3 {
                 font-size: 1.3rem;
                 margin-bottom: 10px;
+            }
+            /* שבירת הכותרת הכתומה לשתי שורות בנייד */
+            .orange-line {
+                display: block;
+            }
+            .orange-line::after {
+                content: ""; /* מבטל את הרווח בשבירת שורה */
             }
             .hero-p {
                 font-size: 1.15rem;
@@ -277,7 +287,10 @@
                 <h2 class="sub-title">הונגרית בקלות</h2>
             </div>
             
-            <h3>קורס דיגיטלי לילדים ובני נוער ב-7 ימים בלבד!</h3>
+            <h3>
+                <span class="orange-line">קורס דיגיטלי לילדים ובני נוער</span>
+                <span class="orange-line">ב-7 ימים בלבד!</span>
+            </h3>
             
             <img src="cube2.jpg" alt="קובייה הונגרית" class="main-img">
 
@@ -288,7 +301,7 @@
             </p>
         </header>
 
-        <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקוםס" class="simple-btn" target="_blank">לרכישה מהירה ב-111 ₪</a>
+        <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="simple-btn" target="_blank">לרכישה מהירה ב-111 ₪</a>
 
         <h3 class="section-title">למה דווקא קובייה הונגרית?</h3>
         <p class="section-p">זהו כלי מיוחד במינו הנותן חוויית הצלחה מיידית, ביטחון עצמי גבוה, ריכוז ורוגע.</p>
