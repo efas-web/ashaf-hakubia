@@ -10,8 +10,8 @@
         :root {
             --primary-color: #25D366;
             --primary-hover: #20ba5a;
-            --text-dark: #1e293b;
-            --text-muted: #475569;
+            --text-dark: #000000; /* שונה לשחור מוחלט בשביל כתב חזק */
+            --text-muted: #1e293b; /* שונה לכהה משמעותית בשביל קריאות */
             --bg-light: #ffffff;
             --border-color: #c2f4d3;
             --brand-orange: #ff6f00;
@@ -42,7 +42,7 @@
             padding: 40px 0 15px 0;
         }
 
-        /* מיכל כותרת שחורה - במחשב שורה אחת, בנייד שתיים */
+        /* מיכל כותרת שחורה */
         .main-title-container {
             display: flex;
             flex-direction: row;
@@ -61,7 +61,7 @@
             margin: 0;
         }
 
-        /* הכותרת הכתומה - שליטה על חלוקת שורות */
+        /* הכותרת הכתומה */
         header h3 {
             font-family: 'Rubik', sans-serif;
             font-size: 1.5rem;
@@ -76,7 +76,7 @@
         }
 
         .orange-line::after {
-            content: " "; /* רווח טבעי בין החלקים במחשב */
+            content: " ";
         }
 
         .hero-p {
@@ -147,21 +147,22 @@
             background-color: var(--primary-hover);
         }
 
+        /* כרטיס תמחור מהודק ומחוזק */
         .pricing-card {
             background: #ffffff;
             border: 5px solid var(--primary-color);
             border-radius: 16px;
-            padding: 30px 20px;
-            margin: 30px auto;
-            max-width: 320px;
+            padding: 20px 15px; /* צומצם הרווח הפנימי של הכרטיס */
+            margin: 20px auto;  /* צומצם הרווח החיצוני */
+            max-width: 340px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.08);
         }
 
         .pricing-card h4 {
-            font-size: 1.05rem;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-            font-weight: 600;
+            font-size: 1.2rem;
+            color: #000000;
+            margin-bottom: 5px; /* צומצם רווח */
+            font-weight: 700; /* מחוזק ומודגש */
         }
 
         .price {
@@ -169,17 +170,18 @@
             font-size: 3.2rem;
             font-weight: 700;
             color: #1e293b;
-            margin-bottom: 15px;
+            margin-bottom: 5px; /* צומצם רווח */
         }
 
         .v-label {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
+            gap: 6px;
+            font-size: 1.05rem;
+            color: #000000; /* שונה לשחור קריא וחזק */
+            margin-bottom: 15px; /* צומצם רווח */
+            font-weight: 600;
         }
 
         .v-icon {
@@ -192,22 +194,30 @@
             background-color: var(--primary-color);
             color: white;
             text-decoration: none;
-            padding: 14px;
-            font-size: 1.2rem;
+            padding: 12px;
+            font-size: 1.25rem;
             font-weight: bold;
             border-radius: 25px;
             box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
             transition: background-color 0.2s;
+            margin-bottom: 12px;
         }
 
         .action-btn:hover {
             background-color: var(--primary-hover);
         }
 
+        /* טקסט כוכבית תחתון מחוזק */
         .footer-note {
-            font-size: 0.75rem;
-            color: #94a3b8;
-            margin-top: 15px;
+            font-size: 0.95rem; /* הוגדל מעט */
+            color: #000000;    /* שונה לשחור בולט */
+            font-weight: 700;  /* מודגש וחזק */
+            line-height: 1.4;
+        }
+
+        .footer-note span {
+            display: block; /* מאלץ את השורה הבאה לרדת למטה באופן קבוע */
+            margin-top: 2px;
         }
 
         .bullets-list {
@@ -235,10 +245,9 @@
             border: 0;
             height: 1px;
             background: #e2e8f0;
-            margin: 40px 0;
+            margin: 30px 0; /* צומצם רווח בין פסקאות */
         }
 
-        /* התאמות מיוחדות למסכים קטנים (טלפונים) */
         @media (max-width: 480px) {
             header {
                 padding: 25px 0 10px 0;
@@ -255,12 +264,11 @@
                 font-size: 1.3rem;
                 margin-bottom: 10px;
             }
-            /* שבירת הכותרת הכתומה לשתי שורות בנייד */
             .orange-line {
                 display: block;
             }
             .orange-line::after {
-                content: ""; /* מבטל את הרווח בשבירת שורה */
+                content: "";
             }
             .hero-p {
                 font-size: 1.15rem;
@@ -313,10 +321,13 @@
             <div class="price">₪111</div>
             <div class="v-label">
                 <span class="v-icon">✓</span>
-                <span>התשלום מתבצע בקלות ב-Blt או PayBox</span>
+                <span>התשלום מתבצע בקלות ב-Bit או PayBox</span>
             </div>
             <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="action-btn" target="_blank">לרכישה מהירה ב-111 ש"ח</a>
-            <p class="footer-note">* המדריך יישלח אליכם ישירות לוואטסאפ או למייל מיד לאחר התשלום.</p>
+            <p class="footer-note">
+                * המדריך יישלח אליכם ישירות לוואטסאפ או למייל
+                <span>מיד לאחר התשלום.</span>
+            </p>
         </div>
 
         <hr>
@@ -339,10 +350,13 @@
             <div class="price">₪111</div>
             <div class="v-label">
                 <span class="v-icon">✓</span>
-                <span>התשלום מתבצע בקלות ב-Blt או PayBox</span>
+                <span>התשלום מתבצע בקלות ב-Bit או PayBox</span>
             </div>
             <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="action-btn" target="_blank">לרכישה מהירה ב-111 ש"ח</a>
-            <p class="footer-note">* המדריך יישלח אליכם ישירות לוואטסאפ או למייל מיד לאחר התשלום.</p>
+            <p class="footer-note">
+                * המדריך יישלח אליכם ישירות לוואטסאפ או למייל
+                <span>מיד לאחר התשלום.</span>
+            </p>
         </div>
 
         <hr>
