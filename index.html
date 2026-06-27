@@ -10,8 +10,8 @@
         :root {
             --primary-color: #25D366;
             --primary-hover: #20ba5a;
-            --text-dark: #000000; /* שונה לשחור מוחלט בשביל כתב חזק */
-            --text-muted: #1e293b; /* שונה לכהה משמעותית בשביל קריאות */
+            --text-dark: #000000;
+            --text-muted: #1e293b;
             --bg-light: #ffffff;
             --border-color: #c2f4d3;
             --brand-orange: #ff6f00;
@@ -42,7 +42,6 @@
             padding: 40px 0 15px 0;
         }
 
-        /* מיכל כותרת שחורה */
         .main-title-container {
             display: flex;
             flex-direction: row;
@@ -61,7 +60,6 @@
             margin: 0;
         }
 
-        /* הכותרת הכתומה */
         header h3 {
             font-family: 'Rubik', sans-serif;
             font-size: 1.5rem;
@@ -147,13 +145,12 @@
             background-color: var(--primary-hover);
         }
 
-        /* כרטיס תמחור מהודק ומחוזק */
         .pricing-card {
             background: #ffffff;
             border: 5px solid var(--primary-color);
             border-radius: 16px;
-            padding: 20px 15px; /* צומצם הרווח הפנימי של הכרטיס */
-            margin: 20px auto;  /* צומצם הרווח החיצוני */
+            padding: 20px 15px;
+            margin: 20px auto; 
             max-width: 340px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.08);
         }
@@ -161,8 +158,8 @@
         .pricing-card h4 {
             font-size: 1.2rem;
             color: #000000;
-            margin-bottom: 5px; /* צומצם רווח */
-            font-weight: 700; /* מחוזק ומודגש */
+            margin-bottom: 5px;
+            font-weight: 700;
         }
 
         .price {
@@ -170,7 +167,7 @@
             font-size: 3.2rem;
             font-weight: 700;
             color: #1e293b;
-            margin-bottom: 5px; /* צומצם רווח */
+            margin-bottom: 5px;
         }
 
         .v-label {
@@ -179,8 +176,8 @@
             justify-content: center;
             gap: 6px;
             font-size: 1.05rem;
-            color: #000000; /* שונה לשחור קריא וחזק */
-            margin-bottom: 15px; /* צומצם רווח */
+            color: #000000;
+            margin-bottom: 15px;
             font-weight: 600;
         }
 
@@ -207,16 +204,15 @@
             background-color: var(--primary-hover);
         }
 
-        /* טקסט כוכבית תחתון מחוזק */
         .footer-note {
-            font-size: 0.95rem; /* הוגדל מעט */
-            color: #000000;    /* שונה לשחור בולט */
-            font-weight: 700;  /* מודגש וחזק */
+            font-size: 0.95rem;
+            color: #000000;    
+            font-weight: 700;  
             line-height: 1.4;
         }
 
         .footer-note span {
-            display: block; /* מאלץ את השורה הבאה לרדת למטה באופן קבוע */
+            display: block;
             margin-top: 2px;
         }
 
@@ -245,7 +241,38 @@
             border: 0;
             height: 1px;
             background: #e2e8f0;
-            margin: 30px 0; /* צומצם רווח בין פסקאות */
+            margin: 30px 0;
+        }
+
+        /* עיצוב כפתור וואטסאפ צף */
+        .whatsapp-floating {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-floating:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
+
+        .whatsapp-floating::before {
+            content: "💬";
+            font-size: 28px;
         }
 
         @media (max-width: 480px) {
@@ -309,7 +336,7 @@
             </p>
         </header>
 
-        <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="simple-btn" target="_blank">לרכישה מהירה ב-111 ₪</a>
+        <a href="https://wa.me/972546881422?text=היי%20אורי,%20אני%20רוצה%20לרכוש%20את%20הקורס!%20אשמח%20לקישור%20לתשלום%20בביט%20או%20פייבוקס" class="simple-btn" target="_blank">לרכישה מהירה בביט / PayBox ➔</a>
 
         <h3 class="section-title">למה דווקא קובייה הונגרית?</h3>
         <p class="section-p">זהו כלי מיוחד במינו הנותן חוויית הצלחה מיידית, ביטחון עצמי גבוה, ריכוז ורוגע.</p>
@@ -323,7 +350,7 @@
                 <span class="v-icon">✓</span>
                 <span>התשלום מתבצע בקלות ב-Bit או PayBox</span>
             </div>
-            <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="action-btn" target="_blank">לרכישה מהירה ב-111 ש"ח</a>
+            <a href="https://wa.me/972546881422?text=היי%20אורי,%20אני%20רוצה%20לרכוש%20את%20הקורס!%20אשמח%20לקישור%20לתשלום%20בביט%20או%20פייבוקס" class="action-btn" target="_blank">לרכישה מהירה בביט / PayBox ➔</a>
             <p class="footer-note">
                 * המדריך יישלח אליכם ישירות לוואטסאפ או למייל
                 <span>מיד לאחר התשלום.</span>
@@ -352,7 +379,7 @@
                 <span class="v-icon">✓</span>
                 <span>התשלום מתבצע בקלות ב-Bit או PayBox</span>
             </div>
-            <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="action-btn" target="_blank">לרכישה מהירה ב-111 ש"ח</a>
+            <a href="https://wa.me/972546881422?text=היי%20אורי,%20אני%20רוצה%20לרכוש%20את%20הקורס!%20אשמח%20לקישור%20לתשלום%20בביט%20או%20פייבוקס" class="action-btn" target="_blank">לרכישה מהירה בביט / PayBox ➔</a>
             <p class="footer-note">
                 * המדריך יישלח אליכם ישירות לוואטסאפ או למייל
                 <span>מיד לאחר התשלום.</span>
@@ -388,10 +415,12 @@
                 <span class="v-icon">✓</span>
                 <span>גישה מיידית ותמיכה לכל החיים</span>
             </div>
-            <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לרכוש%20את%20הקורס" class="action-btn" target="_blank">קליק אחד והקורס אצלך ➔</a>
+            <a href="https://wa.me/972546881422?text=היי%20אורי,%20אני%20רוצה%20לרכוש%20את%20הקורס!%20אשמח%20לקישור%20לתשלום%20בביט%20או%20פייבוקס" class="action-btn" target="_blank">לרכישה מהירה בביט / PayBox ➔</a>
         </div>
 
     </div>
+
+    <a href="https://wa.me/972546881422?text=היי%20אורי,%20אשמח%20לקבל%20פרטים%20נוספים%20על%20הקורס%20שלך" class="whatsapp-floating" target="_blank" title="שאלות בוואטסאפ"></a>
 
 </body>
 </html>
