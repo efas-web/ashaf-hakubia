@@ -224,11 +224,11 @@
             margin: 40px 0;
         }
 
-        /* עיצוב כפתור וואטסאפ צף - אייקון בלבד */
+        /* עיצוב כפתור וואטסאפ צף - קרוב לתוכן בדסקטופ */
         .whatsapp-floating {
             position: fixed;
             bottom: 20px;
-            right: 20px; /* ממוקם בצד ימין למטה למראה קלאסי */
+            right: max(20px, calc(50% - 380px)); /* הפתרון לשמירת האייקון קרוב לאמצע */
             background-color: #25D366;
             width: 60px;
             height: 60px;
