@@ -88,7 +88,8 @@
             width: 100%;
             max-width: 290px;
             border-radius: 16px;
-            margin: 20px auto 20px auto;
+            /* הוגדל הרווח התחתון כדי להרחיק את התמונה מהטקסט */
+            margin: 20px auto 35px auto;
             display: block;
             border: none;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -114,6 +115,7 @@
             object-position: center top; 
         }
 
+        /* מרווח קבוע מעל ומתחת לכל כותרת כדי שיהיה רווח שווה בכל הדף */
         .section-title {
             font-family: 'Rubik', sans-serif;
             font-size: 1.5rem;
@@ -137,7 +139,7 @@
             font-weight: bold;
             font-size: 1.1rem;
             border-radius: 4px;
-            margin: 20px auto;
+            margin: 20px auto 35px auto;
             transition: background-color 0.2s;
         }
 
@@ -145,13 +147,13 @@
             background-color: var(--primary-hover);
         }
 
-        /* עיצוב הריבועים */
+        /* עיצוב הריבועים - מרווח שווה של 35 פיקסלים מעל ומתחת */
         .pricing-card {
             background: #ffffff;
             border: 5px solid var(--primary-color);
             border-radius: 16px;
             padding: 20px 15px;
-            margin: 20px auto; 
+            margin: 35px auto; 
             max-width: 350px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.08);
         }
@@ -222,14 +224,13 @@
             border: 0;
             height: 1px;
             background: #e2e8f0;
-            margin: 30px 0;
+            margin: 40px 0;
         }
 
         /* עיצוב כפתור וואטסאפ צף מורחב */
         .whatsapp-floating {
             position: fixed;
             bottom: 25px;
-            /* ממקם אותו משמאל לתוכן במסכים רחבים, ובצד שמאל במסכים צרים */
             left: max(20px, calc(50% - 460px));
             background-color: #25D366;
             color: white;
@@ -287,7 +288,7 @@
             }
             .main-img {
                 max-width: 55%;
-                margin: 15px auto 15px auto;
+                margin: 15px auto 25px auto;
             }
             .whatsapp-floating {
                 font-size: 1rem;
@@ -314,9 +315,8 @@
             <img src="cube2.jpg" alt="קובייה הונגרית" class="main-img">
 
             <p class="hero-p">
-                לימוד בשיטה ייחודית, מהירה ופשוטה - שמתאימה למי שמעולם לא החזיק קובייה, ומביאה אתכם ל-100% הצלחה.
-                <br><br>
-                שיעורים קצרים, לימוד ויזואלי,<br>חווייתי ובגובה העיניים.
+                לימוד בשיטה ייחודית, מהירה ופשוטה - שמתאימה למי שמעולם לא החזיק קובייה, ומביאה אתכם ל-100% הצלחה.<br>
+                שיעורים קצרים, לימוד ויזואלי, חווייתי ובגובה העיניים.
             </p>
         </header>
 
@@ -388,7 +388,7 @@
         <h3 class="section-title" style="color: var(--brand-orange);">אין זמן טוב יותר מהרגע הזה</h3>
         <p class="section-p" style="font-size: 1.25rem; font-weight: 600; color: var(--brand-orange);">קליק אחד והנכס הזה אצלך לכל החיים</p>
         
-        <div class="pricing-card" style="margin-top: 20px;">
+        <div class="pricing-card">
             <h4>קורס ייחודי מסוגו לפתירת קובייה<br>הונגרית ב-7 ימים בלבד</h4>
             <div class="price">₪111</div>
             <a href="https://wa.me/972546881422?text=היי%20אורי,%20אני%20רוצה%20לרכוש%20את%20הקורס!%20אשמח%20לקישור%20לתשלום%20בביט%20או%20פייבוקס" class="action-btn" target="_blank">
